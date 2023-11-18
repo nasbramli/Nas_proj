@@ -203,11 +203,6 @@ footer {
         display: none;
     }
 
-    .thesismobile{
-        display: none;
-    }
-
-
 /* hidden sections - END */
 
 
@@ -262,6 +257,7 @@ footer {
             display: flex;
             flex-direction: column;
             padding-left: 16px;
+            justify-content: center;
         }
 
         .midbanner{
@@ -289,6 +285,7 @@ footer {
             display: flex;
             flex-direction: column;
             padding-left: 16px;
+            justify-content: center;
         }
 
         /* bottom banner */
@@ -317,21 +314,8 @@ footer {
             display: flex;
             flex-direction: column;
             padding-left: 16px;
-        }
-
-        /*thesisbanner mobile*/
-        .thesismobile{
-            display: block;
-        }
-
-        .thsvidmobile video{
-            width: 100%;
-            align-content: center;
-            padding-bottom: 24px;
-        }
-
-
-        
+            justify-content: center;
+        }     
 
     /* main section - END */
 
