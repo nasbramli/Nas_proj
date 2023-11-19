@@ -32,7 +32,7 @@ img{
     width: 100%;
 }
 
-.btn{
+.btn {
     display:inline-block;
     padding: 0.6rem 1rem;/*15:12*/
     font-weight: 500;
@@ -46,7 +46,55 @@ img{
     opacity: 0.8;
 }
 
-.btn primary{
-    background: blue;
+.btn-primary{
+    background: black;
     color: white;
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: gray;
+}
+
+/* Navbar */
+nav{
+    width: 100%;
+    background: #cffbfd;
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;/*forcing it to be on top*/
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .searchbar{
+    background: lightgray;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+}
+
+nav .searchbar input[type="search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1 rem;
+    font-size: 0.9rem;
+    color: black;
+}
+
+nav .searchbar input[type="search"]::placeholder{
+    color: gray;
+}
+
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
