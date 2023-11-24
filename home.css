@@ -69,6 +69,13 @@ nav{
     z-index: 10;/*forcing it to be on top*/
 }
 
+nav .tglogohome{
+    font-size: 24px;
+    font-family: Snell Roundhand, cursive;
+    color: black;
+    font-size: xx-large;
+}
+
 nav .container{
     display: flex;
     align-items: center;
@@ -179,5 +186,78 @@ main .container .left .profile{
 
 .left .sidebar .active i,
 .left .sidebar .active h3{
-    color: #cffbfd;
+    color: lightgray;
+}
+
+.left .sidebar .active::before{
+    content:  "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: relative;
+    background-color: lightgray;
+}
+
+.left .sidebar .menu-item:first-child.active{
+    border-top-left-radius: 1rem;/*card-border-radis*/
+    overflow: hidden;
+}
+
+.left .sidebar .menu-item:first-child.active{
+    border-bottom-left-radius: 1rem;
+    overflow: hidden;
+}
+
+.left .btn{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/*MIDDLE- CREATE POST*/
+.middle .create-post{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background: lightgray;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+}
+
+.middle .create-post input[type="text"]{
+    justify-self: start;
+    width: 100%;
+    padding-left: 1rem;
+    background: transparent;
+    color: black;
+    margin-right: 1rem;
+}
+
+/*FEEDS*/
+.middle .feeds .feed{
+    background-color: lightgray;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.middle .feed .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle .feed .user{
+    display: flex;
+    gap: 1rem;
+}
+
+.middle .feed .photo{
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0.7rem 0;
 }
