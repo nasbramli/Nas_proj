@@ -1,158 +1,186 @@
-body {
+*, *::before, *::after{
     margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+.body{
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: white;
+    overflow-x: hidden;
 }
 
-/* header section - START */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.profilepict{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img{
+    display: block;
     width: 100%;
-    height: 64px;
+}
+
+.btn {
+    display:inline-block;
+    padding: 0.6rem 1rem;/*15:12*/
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background: black;
+    color: white;
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: gray;
+}
+
+/* NAVBAR */
+nav{
+    width: 100%;
+    background: #cffbfd;
+    padding: 0.7rem 0;
+    position: fixed;
     top: 0;
-    z-index: 100;
-    background-color: #cffbfd;
+    z-index: 10;/*forcing it to be on top*/
 }
 
-.logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    float: left;
-}
-
-.logo img{
-    width: 9%;
-    object-fit: contain;
-    padding: 0px 15px 0px 15px;
-}
-
-.logo_tg {
+nav .tglogohome{
     font-size: 24px;
     font-family: Snell Roundhand, cursive;
     color: black;
     font-size: xx-large;
 }
 
-
-.menu {
-    padding-right: 24px;
-    float: right;
-    font-family: Snell Roundhand, cursive;
-    font-size: x-large;
-}
-
-.navbar {
+nav .container{
     display: flex;
-    align-items: right;
-    list-style: none;
-    float:left;
-    text-align:left;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar li a {
-    color: black;
-    text-decoration: none;
-    padding-right: 16px;
-    display: inline-block;
-}
-
-.navbar li a:hover {
-    font-weight: bolder;
-}
-/* header section - END */
-
-/* main section - START */
-main {
-    padding-top: 64px;
-    width: 100%;
-}
-
-/* topbanner */
-.topbanner {
-    background-color: white;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+nav .menu{
     display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-.topbanner img {
-    width: 50%;
-    padding: 32px 24px 32px 24px; /* top right bottom left*/
+/*MAIN*/
+main{
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container{
+    display: grid;
+    column-gap: 2rem;
+}
+
+/*-- TOP BANNER --*/
+main .container .top{
+    height: fit-content;
+    padding: 5.4rem 0;
+    display: flex;
+    
+}
+
+main .container .top .topbannerpic{
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
     object-fit: contain;
+    width: 50%;
 }
 
-.topbanner_text {
+main .container .top .topbanner_text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 32px 24px 32px 24px; /* top right bottom left*/
 }
 
 
-/* midbanner */
-.midbanner {
-    background-color: white;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+/*-- END OF TOP BANNER --*/
+
+/*-- MIDDLE BANNER --*/
+
+main .container .middle{
+    height: fit-content;
+    padding: 5.4rem 0;
+    display: flex;  
+}
+
+main .container .middle .midbannerpic{
+    padding: 1rem;
+    border-radius: 50%;
     display: flex;
-}
-
-.midbanner img {
-    width: 50%;
-    padding: 32px 24px 32px 24px; /* top right bottom left*/
     object-fit: contain;
+    width: 50%;
 }
 
-.midbanner_text {
+main .container .middle .midbanner_text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 32px 24px 32px 24px; /* top right bottom left*/
 }
 
-/* bottom banner */
-.bottombanner{
-    background-color: white;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+/*-- END OF MIDDLE --*/
+
+/*-- BOTTOM --*/
+
+main .container .bottom{
+    height: fit-content;
+    padding: 5.4rem 0;
+    display: flex;  
+}
+
+main .container .bottom .bottombannerpic{
+    padding: 1rem;
+    border-radius: 50%;
     display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.bottombanner video{
-    width: 80%;
-    padding: 32px 24px 32px 24px; /* top right bottom left*/
-}
-
-/*final section*/
-.finalbanner {
-    background-color: white;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-}
-
-.finalbanner img {
-    width: 50%;
-    padding: 32px 24px 32px 24px; /* top right bottom left*/
     object-fit: contain;
+    width: 50%;
+    margin-bottom: 2rem;
 }
 
-.finalbanner_text {
+main .container .bottom .bottombanner_text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 32px 24px 32px 24px; /* top right bottom left*/
 }
 
+/*-- BOTTOM --*/
 
+main .container .bottom{
+    height: fit-content;
+    padding: 5.4rem 0;
+    display: flex;  
+}
 
 /* footer section - START */
 footer {
@@ -190,144 +218,93 @@ footer {
 }
 /* footer section - END */
 
-/* hidden sections - START */
-    .menu_mobile{
+
+/*== RESPONSIVE for smaller screens====*/
+@media screen and (max-width:1200px){
+    .container{
+        width: 96%
+    }
+
+    nav .container .tglogohome{
+        margin-left: 1rem;
+    }
+
+    main .container{
+        grid-template-rows: auto auto;
+        gap: 1rem;
+    }
+
+    main .container .left .profile{
         display: none;
     }
 
-    .midbannermobile{
+    main .container .bottom .bottombanner_text h1{
+        font-size: x-large;
+    }
+
+    main .container .middle .midbanner_text h1{
+        font-size: x-large;
+    }
+
+    main .container .top .topbanner_text h1{
+        font-size: x-large;
+    }
+
+
+}
+
+/*=== Responsive for mobile ===*/
+@media screen and (max-width:992px){
+
+    nav .container .tglogohome{
+        margin-left: 1rem;
+    }
+    
+    nav .container .profilepict{
         display: none;
     }
 
-    .bottombanner_mobile{
+    main .container{
+        grid-template-rows: auto auto;
+    }
+
+    main .container .bottom .bottombanner_text h1{
+        font-size: large;
+    }
+
+    main .container .middle .midbanner_text h1{
+        font-size: large;
+    }
+
+    main .container .top .topbanner_text h1{
+        font-size: large;
+    }
+}
+
+/*=== Responsive for mobile ===*/
+@media screen and (max-width:632px){
+
+    nav .container .tglogohome{
+        font-size: large;
+    }
+    
+    nav .container .profilepict{
         display: none;
     }
 
-/* hidden sections - END */
-
-
-/* media queries */
-@media screen and (max-width: 640px){
-
-    /* header - START */
-    header .logo, header .menu{
-        display: none;
+    main .container{
+        grid-template-rows: auto auto;
     }
 
-    /* menu mobile */
-    header .menu_mobile{
-        display: flex;
-        width: 100%;
-        height: 64px;
-        margin: auto;
-        padding-right: 24px;
-        border: 1px solid gray;
+    main .container .bottom .bottombanner_text h1{
+        font-size: large;
     }
 
-    .navbar{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        margin: auto;
-        list-style: none;
+    main .container .middle .midbanner_text h1{
+        font-size: large;
     }
 
-
-    /* header - END */
-
-    /* main section - START */
-        /* TODO */
-        .topbanner{
-            background-color: white;
-            color: black;
-            font-family:  Arial, Helvetica, sans-serif;
-            display: block;
-            padding-bottom: 32px;
-            align-items: center;
-        }
-
-        .topbanner img{
-            width: 60%;
-            padding: 0px;
-            padding: 32px 24px 32px 24px; /* top right bottom left*/
-            justify-content: center;
-        }
-
-        .topbanner_text{
-            display: flex;
-            flex-direction: column;
-            padding-left: 16px;
-            justify-content: center;
-        }
-
-        .midbanner{
-            display: none;
-        }
-
-        /* mid banner */
-        .midbannermobile{
-            background-color: white;
-            color: black;
-            font-family:  Arial, Helvetica, sans-serif;
-            display: block;
-            padding-bottom: 32px;
-            justify-content: center;
-        }
-
-        .midbannermobile img{
-            width: 60%;
-            padding: 0px;
-            padding: 32px 24px 32px 24px; /* top right bottom left*/
-            justify-content: center;
-        }
-
-        .midbannermobile_text{
-            display: flex;
-            flex-direction: column;
-            padding-left: 16px;
-            justify-content: center;
-        }
-
-        /* bottom banner */
-        .bottombanner{
-            display: none;
-        }
-
-        /*finalbanner mobile*/
-        .finalbanner{
-            background-color: white;
-            color: black;
-            font-family:  Arial, Helvetica, sans-serif;
-            display: block;
-            padding-bottom: 32px;
-            justify-content: center;
-        }
-
-        .finalbanner img{
-            width: 60%;
-            padding: 0px;
-            padding: 32px 24px 32px 24px; /* top right bottom left*/
-            justify-content: center;
-        }
-
-        .finalbanner_text{
-            display: flex;
-            flex-direction: column;
-            padding-left: 16px;
-            justify-content: center;
-        }     
-
-    /* main section - END */
-
-    /* footer section - START */
-        .policies{
-            display: none;
-        }
-
-        .copyright{
-            padding: 16px 0px;
-        }
-
-    /* footer section - END */
-
+    main .container .top .topbanner_text h1{
+        font-size: large;
+    }
 }
