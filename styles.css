@@ -243,13 +243,21 @@ main .container .left .profile{
 /*-- END OF RIGHT --*/
 
 /*-- MESSAGES container --*/
-.chat-container {
-    max-width: 1360px;
-    width: 100%;
-    height: 720px;
-    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, .1);
+/*MAIN*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
-    position: relative;
+    
+}
+
+.chat-container {
+    max-width: fit-content;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    
 }
 
 /*-- MESSAGES start: Content side --*/
@@ -405,9 +413,10 @@ main .container .left .profile{
 }
 .conversation-top {
     padding: 8px 16px;
-    background-color: #cffbfd;
+    background-color: lightgray;
     display: flex;
     align-items: center;
+    border-radius: 2rem;
 }
 .conversation-back {
     background-color: transparent;
